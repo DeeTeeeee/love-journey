@@ -1,3 +1,15 @@
 {
-  "extends": "@tsconfig/react-native/tsconfig.json"
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "exclude": ["__tests__/**/*-test.ts", "**/node_modules", "**/.*/"],
+  "compilerOptions": {
+    "jsx": "react-native",
+    "baseUrl": "./",
+    "paths": {
+      "@constants": ["src/constants/index.ts"],
+      "@assets": ["src/assets"],
+      "@components/*": ["src/components/*"],
+      "@containers/*": ["src/containers/*"],
+      "@utils": ["src/utils/index.ts"]
+    }
+  }
 }
