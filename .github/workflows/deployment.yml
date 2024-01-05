@@ -8,7 +8,7 @@ on:
 jobs:
   check-cache-exist:
     name: Check cache exist
-    runs-on: [self-hosted, macOS]
+    runs-on: [self-hosted, macos]
     outputs:
       status: ${{ steps.is-exist-cache.outcome }}
     steps:
@@ -19,3 +19,18 @@ jobs:
         id: is-exist-cache
         continue-on-error: true
         run: bash .github/scripts/check_cache_exist.sh
+
+  setup:
+    name: Install library and cache
+    needs: [check-cache-exist]
+    if: needs.check-cache-exist.outputs.status == 'failure'
+    runs-on: [self-hosted, macos]
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v3
+
+      - name: Clean build
+        run: bash .github/scripts/clean_build.sh
+
+      - name: Cache data
+        run: bash .github/scripts/cache_backup.sh
