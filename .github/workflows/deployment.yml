@@ -19,8 +19,3 @@ jobs:
         id: is-exist-cache
         continue-on-error: true
         run: bash .github/scripts/check_cache_exist.sh
-
-      - name: Xcode Select Version
-        uses: maxim-lobanov/setup-xcode@v1
-        with:
-          xcode-version: '14.3'
