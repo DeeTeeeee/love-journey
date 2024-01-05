@@ -9,16 +9,16 @@ jobs:
   check-cache-exist:
     name: Check cache exist
     runs-on: [self-hosted, macos]
-    outputs:
-      status: ${{ steps.is-exist-cache.outcome }}
+    # outputs:
+    #   status: ${{ steps.is-exist-cache.outcome }}
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v3
 
-      - name: Check exist cache
-        id: is-exist-cache
-        continue-on-error: true
-        run: bash .github/scripts/check_cache_exist.sh
+      # - name: Check exist cache
+      #   id: is-exist-cache
+      #   continue-on-error: true
+      #   run: bash .github/scripts/check_cache_exist.sh
 
       - name: Xcode Select Version
         uses: maxim-lobanov/setup-xcode@v1
