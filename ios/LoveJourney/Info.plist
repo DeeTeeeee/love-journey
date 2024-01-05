@@ -55,5 +55,9 @@
 	<array>
 		<string>AllertaStencil-Regular.ttf</string>
 	</array>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Sử dụng quyền thư viện ảnh để bạn có thể tải hình ảnh lên khi bạn thay đổi hình đại diện.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>LoveJourney needs to access your camera roll so that you can upload your photo: (avatar, etc.)</string>
 </dict>
 </plist>

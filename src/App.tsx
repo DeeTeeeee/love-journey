@@ -1,6 +1,6 @@
 import React from 'react'
 import {NativeBaseProvider} from 'native-base'
-import HomeContainer from './containers/Home/HomeContainer'
+import HomeContainer from './screens/Home/Home'
 import {GestureHandlerRootView} from 'react-native-gesture-handler'
 
 const App = () => {

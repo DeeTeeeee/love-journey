@@ -9,5 +9,6 @@ export const Images = {
 
 export const Colors = {
   pinkPastel: '#ff9fb6',
-  white: '#ffffff'
+  white: '#ffffff',
+  transparent: 'transparent'
 }

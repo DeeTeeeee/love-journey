@@ -8,8 +8,10 @@
       "@constants": ["src/constants/index.ts"],
       "@assets": ["src/assets"],
       "@components/*": ["src/components/*"],
-      "@containers/*": ["src/containers/*"],
-      "@utils": ["src/utils/index.ts"]
+      "@screens/*": ["src/screens/*"],
+      "@utils": ["src/utils/index.ts"],
+      "@apis/*": ["src/apis/*"],
+      "@hooks/*": ["src/hooks/*"],
     }
   }
 }

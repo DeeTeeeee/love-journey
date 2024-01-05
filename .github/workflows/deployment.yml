@@ -1,0 +1,6 @@
+name: Deployment
+
+on:
+  push:
+    tags:
+      - "*"
